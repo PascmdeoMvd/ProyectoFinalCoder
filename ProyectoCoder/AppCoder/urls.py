@@ -1,12 +1,15 @@
-from django.contrib import admin
-from django.urls import path, include
-from .views import mascota, persona, cuidador
+from django.urls import path
+from .views import mascota, persona, cuidador, lista_mascotas
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('agrega-mascota/<nombre>/<edad>', mascota),
     
+    path('agrega-mascota/<nombre>/<edad>', mascota),
+    path('lista-mascotas/', lista_mascotas),
+ 
     
 ]
-
+    
+    
+       
+       
